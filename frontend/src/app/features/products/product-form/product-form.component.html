@@ -1,0 +1,8 @@
+=<h2 class="title">{{ product?._id ? 'Edit' : 'Add' }} Product</h2>
+<form (ngSubmit)="submitForm()">
+  <input [(ngModel)]="productData.name" name="name" placeholder="Name" required />
+  <input [(ngModel)]="productData.category" name="category" placeholder="Category" required />
+  <input [(ngModel)]="productData.quantity" name="quantity" type="number" placeholder="Quantity" required />
+  <input [(ngModel)]="productData.price" name="price" type="number" placeholder="Price" required />
+  <button type="submit">{{ product?._id ? 'Update' : 'Add' }}</button>
+</form>

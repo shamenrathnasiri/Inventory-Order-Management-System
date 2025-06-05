@@ -1,0 +1,28 @@
+<h1 class="header">Product Inventory</h1>
+
+<app-product-form [product]="selectedProduct" (save)="handleSave($event)"></app-product-form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Qty</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products">
+      <td>{{ p.name }}</td>
+      <td>{{ p.category }}</td>
+      <td>{{ p.quantity }}</td>
+      <td>{{ p.price }}</td>
+      <td>
+        <button (click)="editProduct(p)">Edit</button>
+        <button (click)="deleteProduct(p._id!)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
