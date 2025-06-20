@@ -8,8 +8,15 @@ router.get('/', async (req, res) => {
   res.json(products);
 });
 
+// router.get('/check', async (req, res) => {
+//   console.log("xssdsdsdsd");
+//   res.json("Check");
+// });
+
+
 // POST create product
 router.post('/', async (req, res) => {
+  console.log("check");
   const newProduct = new Product(req.body);
   await newProduct.save();
   res.status(201).json(newProduct);

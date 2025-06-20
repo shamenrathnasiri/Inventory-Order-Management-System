@@ -1,4 +1,4 @@
-=<h2 class="title">{{ product?._id ? 'Edit' : 'Add' }} Product</h2>
+<h2 class="title">{{ product?._id ? 'Edit' : 'Add' }} Product</h2>
 <form (ngSubmit)="submitForm()">
   <input [(ngModel)]="productData.name" name="name" placeholder="Name" required />
   <input [(ngModel)]="productData.category" name="category" placeholder="Category" required />
